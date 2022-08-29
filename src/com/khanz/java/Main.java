@@ -6,15 +6,17 @@ public class Main {
     public static void main(String[] args) {
 //        System.out.println("Hello World");
 
-        User user = new User();
+        String firstName, lastName;
+        int ID;
 
         Scanner scanner = new Scanner(System.in);
 
-        user.firstName = scanner.next();
-        user.lastName = scanner.next();
-        user.ID = scanner.nextInt();
+        firstName = scanner.next();
+        lastName = scanner.next();
+        ID = scanner.nextInt();
 
-        System.out.println("Name : " + user.firstName + " " + user.lastName);
-        System.out.println("ID : " + user.ID);
+        User user = new User(firstName, lastName, ID);
+
+        user.showUser();
     }
 }
